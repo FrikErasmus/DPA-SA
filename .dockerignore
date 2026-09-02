@@ -1,8 +1,0 @@
-.dockerignore
-Dockerfile
-docker-compose.yml
-.git
-.gitignore
-*.md
-.cursor
-agent-transcripts
