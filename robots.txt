@@ -1,0 +1,9 @@
+# https://dpa-sa.co.za/robots.txt
+
+User-agent: *
+Allow: /
+
+# Public documentation PDFs
+Allow: /documentation/
+
+Sitemap: https://dpa-sa.co.za/sitemap.xml

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('dpa-theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Impendulo Monitor | DPA-SA — Server & Website Monitoring</title>
+  <meta name="description" content="Impendulo Monitor — monitor, detect, and respond. Server health, website uptime, SSL certificates, IIS, and auto-recovery for South African IT teams and MSPs.">
+  <meta name="keywords" content="Impendulo Monitor, DPA-SA, server monitoring, website monitoring, SSL alerts, IIS monitoring, MSP, South Africa">
+  <meta name="author" content="DPA-SA">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/svg+xml" href="images/dpa-logo.svg">
+  <link rel="canonical" href="https://dpa-sa.co.za/impendulo.html">
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DPA-SA">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:url" content="https://dpa-sa.co.za/impendulo.html">
+  <meta property="og:title" content="Impendulo Monitor | DPA-SA">
+  <meta property="og:description" content="Monitor · Detect · Respond — comprehensive server and website monitoring with alerts and auto-recovery.">
+  <meta property="og:image" content="https://dpa-sa.co.za/images/dpa_logo_transparent.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path fill="currentColor" d="M7.4 17.25q-1.05.875-2.187.8t-1.988-.775t-1.162-1.837t.412-2.338L4.35 10q-.625-.55-.987-1.325T3 7q0-1.65 1.175-2.825T7 3t2.825 1.175T11 7T9.825 9.825T7 11q-.225 0-.45-.025t-.425-.075L4.2 14.15q-.275.45-.175.888t.425.712t.775.313t.875-.313l10.5-9.025q1.05-.875 2.2-.788t2 .788t1.15 1.838t-.425 2.337L19.65 14q.625.55.988 1.325T21 17q0 1.65-1.175 2.825T17 21t-2.825-1.175T13 17t1.175-2.825T17 13q.225 0 .438.025t.412.075l1.95-3.25q.275-.45.175-.888t-.425-.712t-.775-.312t-.875.312zm1.013-8.837Q9 7.825 9 7t-.587-1.412T7 5t-1.412.588T5 7t.588 1.413T7 9t1.413-.587m10 10Q19 17.825 19 17t-.587-1.412T17 15t-1.412.588T15 17t.588 1.413T17 19t1.413-.587M17 17"/>
+        </svg>
+        <span class="logo-text">Digital Process Automation <span class="logo-divider">|</span> DPA-SA</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-toggle" id="navDropdownToggle" aria-expanded="false" aria-haspopup="true">
+            Products &amp; Services
+            <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu" id="navDropdownMenu">
+            <li><a href="bridge-digital-forms.html">Bridge Digital Forms</a></li>
+            <li><a href="impendulo.html" aria-current="page">Impendulo Monitor</a></li>
+            <li><a href="document-imaging.html">Document Imaging</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </li>
+        <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section--page-top product-section">
+      <div class="container">
+        <div class="product-grid">
+          <div class="product-content">
+            <span class="section-tag">Product</span>
+            <h1 class="impendulo-title">
+              <img
+                class="impendulo-logo impendulo-logo--light"
+                src="images/app/impendulo/logo.svg"
+                alt="Impendulo — Monitor · Detect · Respond"
+                width="260"
+                height="72"
+              >
+              <img
+                class="impendulo-logo impendulo-logo--dark"
+                src="images/app/impendulo/logo-dark.svg"
+                alt=""
+                width="260"
+                height="72"
+                aria-hidden="true"
+              >
+            </h1>
+            <h2 class="product-subheading">What it is</h2>
+            <p>
+              A monitoring platform for businesses that run websites and servers for themselves or their clients. A small agent on each server keeps watch; your team sees everything in one web portal and mobile app.
+            </p>
+            <p class="product-tagline">
+              Impendulo Monitor keeps your websites and servers healthy — and tells you the moment something needs attention.
+            </p>
+            <a href="index.html#contact" class="btn btn-primary">Enquire About Impendulo Monitor</a>
+          </div>
+          <div class="product-visual product-visual--monitor">
+            <div class="monitor-preview">
+              <div class="monitor-header">
+                <span class="monitor-dot monitor-dot--green"></span>
+                <span>Live Monitor — All Systems</span>
+              </div>
+              <div class="monitor-row">
+                <span>Website Status</span>
+                <strong class="monitor-status-ok">Up & responding</strong>
+              </div>
+              <div class="monitor-row monitor-row--alert">
+                <span>SSL Certificate</span>
+                <strong>Expires in 12 days</strong>
+              </div>
+              <div class="monitor-row">
+                <span>Server Disk Space</span>
+                <strong>78% used</strong>
+              </div>
+              <div class="monitor-row">
+                <span>Active Alerts</span>
+                <strong>2 notified</strong>
+              </div>
+              <div class="monitor-chart">
+                <div class="monitor-bar" style="height: 92%"></div>
+                <div class="monitor-bar" style="height: 88%"></div>
+                <div class="monitor-bar" style="height: 45%"></div>
+                <div class="monitor-bar" style="height: 95%"></div>
+                <div class="monitor-bar" style="height: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail-grid">
+          <article class="product-detail-card">
+            <h3>What it does for your website</h3>
+            <ul class="product-features-list">
+              <li>Checks that your site is up and responding as expected</li>
+              <li>Spots problems before customers do (slow, down, wrong error page)</li>
+              <li>Sends alerts to the right people when something stays broken</li>
+              <li>Keeps a clear history of what happened and when</li>
+            </ul>
+          </article>
+
+          <article class="product-detail-card product-detail-card--highlight">
+            <h3>Why it's more than "uptime"</h3>
+            <p>
+              Impendulo Monitor also watches the health of the server behind the site — disk space, services, certificates, databases, and more — so you're not just told the site is down, you get context on why.
+            </p>
+          </article>
+
+          <article class="product-detail-card">
+            <h3>Who it's for</h3>
+            <ul class="product-features-list">
+              <li>IT teams and MSPs managing many clients or sites</li>
+              <li>Businesses that need reliable alerts, not noise</li>
+              <li>Organisations that want control of their own monitoring (self-hosted)</li>
+            </ul>
+          </article>
+
+          <article class="product-detail-card product-detail-card--promise">
+            <h3>Why it matters</h3>
+            <p>
+              Fewer surprises, clearer signals, faster recovery. Impendulo Monitor watches what matters, alerts the right people, and gives your team the context to act — without drowning you in noise.
+            </p>
+          </article>
+        </div>
+
+        <div class="impendulo-capabilities">
+          <div class="impendulo-capabilities-header">
+            <h3>What Impendulo Monitor monitors</h3>
+            <p>Comprehensive checks across your servers, websites, applications, and data — with clear actions when something goes wrong.</p>
+          </div>
+
+          <div class="capability-categories">
+            <article class="capability-category">
+              <h4>Server health <span>(the machine behind your site)</span></h4>
+              <ul class="capability-list">
+                <li><strong>CPU</strong> — when the server is overloaded for too long</li>
+                <li><strong>Memory (RAM)</strong> — when the server is running out of memory</li>
+                <li><strong>Disk space</strong> — per drive/volume, before you run out of room</li>
+                <li><strong>Network</strong> — can the server reach the internet or other hosts (ping)</li>
+                <li><strong>Network speed</strong> — download/upload below your minimum</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Websites &amp; online services</h4>
+              <ul class="capability-list">
+                <li><strong>Websites</strong> — is the site up, responding, and returning the right status code</li>
+                <li><strong>APIs</strong> — connectivity, status codes, response body checks, and slow responses</li>
+                <li><strong>SSL certificates</strong> — expiry warnings, expired certs, and TLS/connectivity problems</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Applications &amp; infrastructure <span>(mainly Windows servers)</span></h4>
+              <ul class="capability-list">
+                <li><strong>Windows services</strong> — is each critical service running (can auto-restart before alerting)</li>
+                <li><strong>IIS app pools &amp; sites</strong> — web hosting components running as expected (can auto-recover)</li>
+                <li><strong>Event logs</strong> — Windows Event Log or Linux journal entries you care about (errors, warnings, etc.)</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Files, folders &amp; databases</h4>
+              <ul class="capability-list">
+                <li><strong>Directories</strong> — missing folders, empty folders, or expected files not present</li>
+                <li><strong>SQL / database checks</strong> — can we connect, did the query return what we expected (rows, no rows, or a value threshold)</li>
+                <li><strong>Custom scripts</strong> — PowerShell or SQL checks you define for your own business rules</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="impendulo-response">
+            <h4>What happens when something is wrong</h4>
+            <div class="response-options">
+              <div class="response-option">
+                <span class="response-icon response-icon--log">📝</span>
+                <div>
+                  <strong>Log only</strong>
+                  <p>Recorded in activity/history</p>
+                </div>
+              </div>
+              <div class="response-option">
+                <span class="response-icon response-icon--alert">🔔</span>
+                <div>
+                  <strong>Log &amp; alert</strong>
+                  <p>Team notified in the portal (and email when configured)</p>
+                </div>
+              </div>
+              <div class="response-option">
+                <span class="response-icon response-icon--recover">🔄</span>
+                <div>
+                  <strong>Auto-recovery</strong>
+                  <p>Some service and IIS issues can be restarted automatically before anyone is alerted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <h2>See problems early. Fix faster.</h2>
+        <p>Impendulo Monitor gives your team one place for dashboards, alerts, and activity — on desktop and phone.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg">Enquire About Impendulo Monitor</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>Products &amp; Services</h4>
+        <ul>
+          <li><a href="bridge-digital-forms.html">Bridge Digital Forms</a></li>
+          <li><a href="impendulo.html">Impendulo Monitor</a></li>
+          <li><a href="document-imaging.html">Document Imaging</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Privacy Statement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+          <li><a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Website Usage Terms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+          <li><a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">PAIA Manual <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 DPA-SA. All rights reserved. &nbsp;|&nbsp;
+        <a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer">Privacy</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer">Terms</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer">PAIA</a>
+      </p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

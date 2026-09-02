@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('dpa-theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Bridge Digital Forms | DPA-SA — Field Survey App</title>
+  <meta name="description" content="Bridge Digital Forms — offline-first field survey and data capture app for South African organisations. Rich media, GPS, HACCP checklists, and background sync.">
+  <meta name="keywords" content="Bridge Digital Forms, DPA-SA, field surveys, mobile data capture, offline forms, HACCP, cold chain, South Africa">
+  <meta name="author" content="DPA-SA">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/svg+xml" href="images/dpa-logo.svg">
+  <link rel="canonical" href="https://dpa-sa.co.za/bridge-digital-forms.html">
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DPA-SA">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:url" content="https://dpa-sa.co.za/bridge-digital-forms.html">
+  <meta property="og:title" content="Bridge Digital Forms | DPA-SA">
+  <meta property="og:description" content="Offline-first mobile app for field surveys, inspections, and rich data capture — built for real field conditions.">
+  <meta property="og:image" content="https://dpa-sa.co.za/images/dpa_logo_transparent.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path fill="currentColor" d="M7.4 17.25q-1.05.875-2.187.8t-1.988-.775t-1.162-1.837t.412-2.338L4.35 10q-.625-.55-.987-1.325T3 7q0-1.65 1.175-2.825T7 3t2.825 1.175T11 7T9.825 9.825T7 11q-.225 0-.45-.025t-.425-.075L4.2 14.15q-.275.45-.175.888t.425.712t.775.313t.875-.313l10.5-9.025q1.05-.875 2.2-.788t2 .788t1.15 1.838t-.425 2.337L19.65 14q.625.55.988 1.325T21 17q0 1.65-1.175 2.825T17 21t-2.825-1.175T13 17t1.175-2.825T17 13q.225 0 .438.025t.412.075l1.95-3.25q.275-.45.175-.888t-.425-.712t-.775-.312t-.875.312zm1.013-8.837Q9 7.825 9 7t-.587-1.412T7 5t-1.412.588T5 7t.588 1.413T7 9t1.413-.587m10 10Q19 17.825 19 17t-.587-1.412T17 15t-1.412.588T15 17t.588 1.413T17 19t1.413-.587M17 17"/>
+        </svg>
+        <span class="logo-text">Digital Process Automation <span class="logo-divider">|</span> DPA-SA</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-toggle" id="navDropdownToggle" aria-expanded="false" aria-haspopup="true">
+            Products &amp; Services
+            <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu" id="navDropdownMenu">
+            <li><a href="bridge-digital-forms.html" aria-current="page">Bridge Digital Forms</a></li>
+            <li><a href="impendulo.html">Impendulo Monitor</a></li>
+            <li><a href="document-imaging.html">Document Imaging</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </li>
+        <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section--page-top field-surveys">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Core Expertise</span>
+          <h1 class="bridge-mobile-title">
+            <svg class="bridge-mobile-logo" xmlns="http://www.w3.org/2000/svg" viewBox="2 3 20 17" aria-hidden="true">
+              <path fill="currentColor" d="M18 4a1 1 0 0 1 .993.883L19 5v1.565l.116.101l.277.231q.076.063.158.126c.533.415 1.177.832 1.765 1.028a1 1 0 1 1-.632 1.898a7 7 0 0 1-1.43-.694L19 9.091V14h3a1 1 0 0 1 .117 1.993L22 16h-3v3a1 1 0 0 1-1.993.117L17 19v-3H7v3a1 1 0 0 1-1.993.117L5 19v-3H2a1 1 0 0 1-.117-1.993L2 14h3V9.09c-.496.331-1.078.657-1.684.859a1 1 0 0 1-.632-1.898c.588-.196 1.232-.613 1.765-1.028l.158-.126l.277-.231L5 6.565V5a1 1 0 0 1 1.993-.117L7 5v1.722a4.8 4.8 0 0 0 .937.997C8.71 8.338 9.993 9 12 9s3.29-.662 4.063-1.28c.393-.315.664-.626.832-.851L17 6.722V5a1 1 0 0 1 1-1m-1 5.517a7.6 7.6 0 0 1-1.666.895l-.334.121V14h2zm-4 1.436a10.5 10.5 0 0 1-1.677.026L11 10.953V14h2zM7 9.517V14h2v-3.467l-.334-.12a7.6 7.6 0 0 1-1.428-.733z"/>
+            </svg>
+            Bridge Digital Forms
+          </h1>
+          <p>
+            Bridge Digital Forms is a mobile data capture app that can be easily tailored to suit multiple remote data capturing applications. Any type of digital form can be created enabling a user to remotely capture embedded Photos, Video, Text, Signatures, GPS Locations, Barcodes, Maps, Dates and OCR.
+          </p>
+          <p>
+            Besides forms being easily accessible online and offline, forms can even be pushed to a user, so initiating a task with potential real-time information gathering and reporting.
+          </p>
+
+          <div class="app-store-links">
+            <p class="app-store-links__label">Download the app</p>
+            <div class="app-store-links__buttons">
+              <a
+                href="https://play.google.com/store/apps/details?id=coza.dpasa.surveybridge&pcampaignid=web_share"
+                class="app-store-badge"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="app-store-badge__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.004 1.004 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+                <span class="app-store-badge__text">
+                  <small>Get it on</small>
+                  Google Play
+                </span>
+              </a>
+              <a
+                href="https://apps.apple.com/za/app/bridge-digital-forms/id6758984493"
+                class="app-store-badge"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="app-store-badge__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="app-store-badge__text">
+                  <small>Download on the</small>
+                  App Store
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bridge-screens">
+          <div class="product-capabilities-header">
+            <h3>See Bridge in action</h3>
+            <p>From device activation to forms, location capture, and dashboards — built for real field work.</p>
+          </div>
+          <div class="bridge-screens-grid">
+            <figure class="bridge-screen">
+              <div class="bridge-screen__frame">
+                <img src="images/app/bridge/10.jpeg" alt="Bridge Digital Forms device activation screen" width="360" height="720" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>Secure device registration</strong>
+                <span>API-authenticated onboarding with a registration key from your administrator.</span>
+              </figcaption>
+            </figure>
+            <figure class="bridge-screen">
+              <div class="bridge-screen__frame">
+                <img src="images/app/bridge/15.jpeg" alt="Bridge Digital Forms completed survey with photo capture and field types" width="360" height="720" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>Dynamic forms &amp; workflows</strong>
+                <span>Tasks, drafts, and completion tracking with rich field types, photos, and validation.</span>
+              </figcaption>
+            </figure>
+            <figure class="bridge-screen">
+              <div class="bridge-screen__frame">
+                <img src="images/app/bridge/8.jpeg" alt="Bridge Digital Forms location map and time capture" width="360" height="720" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>Location-aware capture</strong>
+                <span>Maps, proximity guidance, drawings, and time fields when the job needs context.</span>
+              </figcaption>
+            </figure>
+            <figure class="bridge-screen">
+              <div class="bridge-screen__frame">
+                <img src="images/app/bridge/13.jpeg" alt="Bridge Digital Forms charts and operational dashboard" width="360" height="720" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>Operational dashboards</strong>
+                <span>Charts and status views so managers can see progress at a glance.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="capture-capabilities">
+          <h3>Capture Anything, Anywhere</h3>
+          <div class="use-case-tags">
+            <span>Photos</span>
+            <span>Video</span>
+            <span>Text</span>
+            <span>Signatures</span>
+            <span>GPS Locations</span>
+            <span>Barcodes</span>
+            <span>Maps</span>
+            <span>Dates</span>
+            <span>OCR</span>
+          </div>
+        </div>
+
+        <div class="survey-pillars">
+          <article class="survey-pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+            </div>
+            <h3>Build Smarter Forms</h3>
+            <p>
+              Use our simple drag-and-drop Form Builder to customize your forms. Unlike paper, your forms can now validate answers, collect rich media, and reference live data resources.
+            </p>
+          </article>
+
+          <article class="survey-pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Collect Data Anywhere</h3>
+            <p>
+              Your teams can complete and submit forms anywhere — even without an internet connection. No more missing paperwork.
+            </p>
+          </article>
+
+          <article class="survey-pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Deliver Data to the Right Places</h3>
+            <p>
+              Information is delivered exactly where you need it. Flag issues for immediate attention. Send responses directly to your data systems to eliminate data re-entry.
+            </p>
+          </article>
+        </div>
+
+        <div class="field-survey-body">
+          <p>
+            When data is captured and transmitted back to your central information hub, it can then be used in a variety of ways, enabling you to create all kinds of improved Workflows, Reports, Business Intelligence Dashboards, Alerts and Notifications – and all in real-time. Stored securely in the cloud this central hub of information can be accessed, shared and integrated with any current systems you have.
+          </p>
+          <p>
+            Available on all types of mobile device and covering every industry, Bridge Digital Forms has enabled many companies to realise significant cost savings and improved statutory compliance.
+          </p>
+        </div>
+
+        <div class="product-capabilities">
+          <div class="product-capabilities-header">
+            <h3>What Bridge Digital Forms can do</h3>
+            <p>Built for real field conditions — secure access, rich capture, offline reliability, and the operational tools teams need day to day.</p>
+          </div>
+
+          <div class="capability-categories">
+            <article class="capability-category">
+              <h4>Access &amp; workflows</h4>
+              <ul class="capability-list">
+                <li><strong>Device registration &amp; secure access</strong> — API-authenticated onboarding and user/session-aware behavior</li>
+                <li><strong>Task, Survey, Draft &amp; Completed</strong> — start, pause, resume, and finalize field work cleanly</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Forms &amp; data capture</h4>
+              <ul class="capability-list">
+                <li><strong>Dynamic forms engine</strong> — text, numeric, decimal, date/time, single/multi select, checkboxes, triggers, and sub-questions</li>
+                <li><strong>Rich media capture</strong> — camera photos, file attachments, signatures, canvas/sketch, QR scan, and video/watch-required flows</li>
+                <li><strong>Location-aware capture</strong> — coordinates, map display, and proximity validation for required geo questions</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Offline, sync &amp; notifications</h4>
+              <ul class="capability-list">
+                <li><strong>Offline-first operation</strong> — local database persistence, then background sync when connectivity returns</li>
+                <li><strong>Background sync &amp; retry</strong> — pipelines for responses, notifications, and operational logs</li>
+                <li><strong>Push notifications</strong> — dev/prod build compatible, with in-app notifications and unread indicators</li>
+              </ul>
+            </article>
+
+            <article class="capability-category">
+              <h4>Operations &amp; field management</h4>
+              <ul class="capability-list">
+                <li><strong>Operational dashboards</strong> — tasks, surveys, drafts, completed, and incident records with category grouping and fast navigation</li>
+                <li><strong>Incident logging</strong> — capture field incidents with details and attached media</li>
+              </ul>
+            </article>
+
+            <article class="capability-category capability-category--wide">
+              <h4>Reliability &amp; support</h4>
+              <ul class="capability-list">
+                <li><strong>User-safety</strong> — unsaved-changes confirmation before leaving forms, reducing accidental data loss</li>
+                <li><strong>Configurable retention</strong> — local data hygiene for predictable storage and cleaner historical data handling</li>
+                <li><strong>Built-in diagnostics</strong> — structured logging and sync/error tracking so support teams can troubleshoot quickly</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="business-value">
+          <div class="product-capabilities-header">
+            <h3>Business value</h3>
+            <p>Bridge Digital Forms delivers measurable outcomes for field teams, managers, and the business — not just features on a device.</p>
+          </div>
+
+          <div class="business-value-grid">
+            <article class="business-value-item">
+              <strong>Higher field productivity</strong>
+              <p>Faster completion with reusable digital workflows and reduced admin overhead.</p>
+            </article>
+            <article class="business-value-item">
+              <strong>Better data quality</strong>
+              <p>Required-field logic, controlled input types, and validation reduce bad or incomplete submissions.</p>
+            </article>
+            <article class="business-value-item">
+              <strong>Fewer lost submissions</strong>
+              <p>Offline capture and queued sync ensures work continues even with poor connectivity.</p>
+            </article>
+            <article class="business-value-item">
+              <strong>Stronger compliance &amp; audit trail</strong>
+              <p>Timestamps, logs, completion records, and structured evidence — photos, signatures, and files.</p>
+            </article>
+            <article class="business-value-item">
+              <strong>Operational visibility</strong>
+              <p>Near-real-time updates, notifications, and status-based queues for managers and coordinators.</p>
+            </article>
+            <article class="business-value-item">
+              <strong>Lower support friction</strong>
+              <p>Robust sync/error handling and trace logs make issues easier to diagnose and resolve.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="use-cases">
+          <h3>Common Field Survey Applications</h3>
+          <div class="use-case-tags">
+            <span>Utility Meter Reading</span>
+            <span>Infrastructure Inspections</span>
+            <span>Asset Audits</span>
+            <span>Environmental Surveys</span>
+            <span>Customer Site Visits</span>
+            <span>Quality Assurance Checks</span>
+            <span>Food Safety &amp; Health &amp; Safety Inspections</span>
+            <span>Cold Chain Verification</span>
+            <span>HACCP Checklist Execution</span>
+            <span>Supplier Delivery &amp; Receiving Checks</span>
+            <span>Property Assessments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <h2>Ready to modernise your field work with Bridge Digital Forms?</h2>
+        <p>Enable capture, management and analysis of your information — for better business performance.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg">Enquire About Bridge Digital Forms</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>Products &amp; Services</h4>
+        <ul>
+          <li><a href="bridge-digital-forms.html">Bridge Digital Forms</a></li>
+          <li><a href="impendulo.html">Impendulo Monitor</a></li>
+          <li><a href="document-imaging.html">Document Imaging</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Privacy Statement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+          <li><a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Website Usage Terms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+          <li><a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">PAIA Manual <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 DPA-SA. All rights reserved. &nbsp;|&nbsp;
+        <a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer">Privacy</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer">Terms</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer">PAIA</a>
+      </p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

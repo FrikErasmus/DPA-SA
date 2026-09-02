@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('dpa-theme');
+        if (!theme) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>DPA-SA | Digital Process Automation</title>
+  <meta name="description" content="DPA-SA — Digital Process Automation for South African organisations. Bridge Digital Forms field surveys, Impendulo Monitor server monitoring, and document imaging.">
+  <meta name="keywords" content="DPA-SA, Digital Process Automation, Bridge Digital Forms, field surveys, Impendulo Monitor, server monitoring, document imaging, South Africa">
+  <meta name="author" content="DPA-SA">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/svg+xml" href="images/dpa-logo.svg">
+  <link rel="canonical" href="https://dpa-sa.co.za/">
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DPA-SA">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:url" content="https://dpa-sa.co.za/">
+  <meta property="og:title" content="DPA-SA | Digital Process Automation">
+  <meta property="og:description" content="We enable capture, management and analysis of information for better business performance through digital processes automation.">
+  <meta property="og:image" content="https://dpa-sa.co.za/images/dpa_logo_transparent.png">
+  <meta property="og:image:alt" content="DPA-SA — Digital Process Automation">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DPA-SA | Digital Process Automation">
+  <meta name="twitter:description" content="Bridge Digital Forms field surveys, Impendulo Monitor, and document imaging for South African organisations.">
+  <meta name="twitter:image" content="https://dpa-sa.co.za/images/dpa_logo_transparent.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dpa-sa.co.za/#organization",
+        "name": "DPA-SA",
+        "alternateName": "Digital Process Automation",
+        "url": "https://dpa-sa.co.za/",
+        "logo": "https://dpa-sa.co.za/images/dpa_logo_transparent.png",
+        "description": "South African company specialising in digital process automation, Bridge Digital Forms field surveys, server monitoring, and document imaging.",
+        "email": "info@dpa-sa.co.za",
+        "telephone": "+27-61-520-6017",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dublin Street",
+          "addressLocality": "Krugersdorp",
+          "addressRegion": "Gauteng",
+          "addressCountry": "ZA"
+        },
+        "areaServed": { "@type": "Country", "name": "South Africa" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dpa-sa.co.za/#website",
+        "url": "https://dpa-sa.co.za/",
+        "name": "DPA-SA",
+        "publisher": { "@id": "https://dpa-sa.co.za/#organization" },
+        "inLanguage": "en-ZA"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path fill="currentColor" d="M7.4 17.25q-1.05.875-2.187.8t-1.988-.775t-1.162-1.837t.412-2.338L4.35 10q-.625-.55-.987-1.325T3 7q0-1.65 1.175-2.825T7 3t2.825 1.175T11 7T9.825 9.825T7 11q-.225 0-.45-.025t-.425-.075L4.2 14.15q-.275.45-.175.888t.425.712t.775.313t.875-.313l10.5-9.025q1.05-.875 2.2-.788t2 .788t1.15 1.838t-.425 2.337L19.65 14q.625.55.988 1.325T21 17q0 1.65-1.175 2.825T17 21t-2.825-1.175T13 17t1.175-2.825T17 13q.225 0 .438.025t.412.075l1.95-3.25q.275-.45.175-.888t-.425-.712t-.775-.312t-.875.312zm1.013-8.837Q9 7.825 9 7t-.587-1.412T7 5t-1.412.588T5 7t.588 1.413T7 9t1.413-.587m10 10Q19 17.825 19 17t-.587-1.412T17 15t-1.412.588T15 17t.588 1.413T17 19t1.413-.587M17 17"/>
+        </svg>
+        <span class="logo-text">Digital Process Automation <span class="logo-divider">|</span> DPA-SA</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-toggle" id="navDropdownToggle" aria-expanded="false" aria-haspopup="true">
+            Products &amp; Services
+            <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu" id="navDropdownMenu">
+            <li><a href="bridge-digital-forms.html">Bridge Digital Forms</a></li>
+            <li><a href="impendulo.html">Impendulo Monitor</a></li>
+            <li><a href="document-imaging.html">Document Imaging</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </li>
+        <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-layout container">
+        <div class="hero-intro">
+          <h1>Field Surveys,<br><span class="gradient-text">Digitised & Delivered</span></h1>
+          <p class="hero-subtitle">
+            DPA-SA empowers organisations across South Africa to capture accurate field data in real time —
+            replacing slow, error-prone paper surveys with tailored mobile solutions that deliver results fast.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="form-preview">
+                <div class="form-header">
+                  <div class="form-dot"></div>
+                  <span>Bridge Digital Forms — Site A-12</span>
+                </div>
+                <div class="form-field">
+                  <label>Location verified</label>
+                  <div class="form-value success">GPS locked ✓</div>
+                </div>
+                <div class="form-field">
+                  <label>Meter reading</label>
+                  <div class="form-value">4,287 kWh</div>
+                </div>
+                <div class="form-field">
+                  <label>Photo evidence</label>
+                  <div class="form-photo"></div>
+                </div>
+                <div class="form-submit">Submit Survey</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-details">
+          <p class="hero-slogan">
+            We enable <strong>capture</strong>, <strong>management</strong> and <strong>analysis</strong> of information for better business performance through digital processes automation.
+          </p>
+          <div class="hero-actions">
+            <a href="index.html#contact" class="btn btn-primary">Start Your Digital Journey</a>
+            <a href="bridge-digital-forms.html" class="btn btn-secondary">Explore Bridge Digital Forms</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">Capture</span>
+              <span class="stat-label">Field & mobile data</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">Management</span>
+              <span class="stat-label">Enterprise information</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">Analysis</span>
+              <span class="stat-label">Better performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-overview">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag">Products &amp; Services</span>
+          <h2>Solutions built for real-world operations</h2>
+          <p>From the field to the server room — DPA-SA helps you capture data, monitor systems, and manage records with confidence.</p>
+        </div>
+
+        <div class="product-teasers">
+          <article class="product-teaser">
+            <span class="product-teaser-tag">Our Core Expertise</span>
+            <h3 class="bridge-mobile-title bridge-mobile-title--sm">
+              <svg class="bridge-mobile-logo" xmlns="http://www.w3.org/2000/svg" viewBox="2 3 20 17" aria-hidden="true">
+                <path fill="currentColor" d="M18 4a1 1 0 0 1 .993.883L19 5v1.565l.116.101l.277.231q.076.063.158.126c.533.415 1.177.832 1.765 1.028a1 1 0 1 1-.632 1.898a7 7 0 0 1-1.43-.694L19 9.091V14h3a1 1 0 0 1 .117 1.993L22 16h-3v3a1 1 0 0 1-1.993.117L17 19v-3H7v3a1 1 0 0 1-1.993.117L5 19v-3H2a1 1 0 0 1-.117-1.993L2 14h3V9.09c-.496.331-1.078.657-1.684.859a1 1 0 0 1-.632-1.898c.588-.196 1.232-.613 1.765-1.028l.158-.126l.277-.231L5 6.565V5a1 1 0 0 1 1.993-.117L7 5v1.722a4.8 4.8 0 0 0 .937.997C8.71 8.338 9.993 9 12 9s3.29-.662 4.063-1.28c.393-.315.664-.626.832-.851L17 6.722V5a1 1 0 0 1 1-1m-1 5.517a7.6 7.6 0 0 1-1.666.895l-.334.121V14h2zm-4 1.436a10.5 10.5 0 0 1-1.677.026L11 10.953V14h2zM7 9.517V14h2v-3.467l-.334-.12a7.6 7.6 0 0 1-1.428-.733z"/>
+              </svg>
+              Bridge Digital Forms
+            </h3>
+            <p>Offline-first mobile app for field surveys, inspections, and data capture — with rich media, GPS, and sync when connectivity returns.</p>
+            <a href="bridge-digital-forms.html" class="btn btn-secondary">Learn more</a>
+          </article>
+
+          <article class="product-teaser">
+            <span class="product-teaser-tag">Product</span>
+            <h3 class="impendulo-title impendulo-title--sm impendulo-title--teaser">
+              <svg class="impendulo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" aria-hidden="true">
+                <polygon points="54,4 96,28 96,76 54,100 12,76 12,28" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+                <polyline points="22,52 34,52 40,32 48,72 56,42 64,62 70,52 86,52" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="impendulo-title-text">Impendulo Monitor</span>
+            </h3>
+            <p>Server and website monitoring with alerts, auto-recovery, and a single portal for your team — on desktop and mobile.</p>
+            <a href="impendulo.html" class="btn btn-secondary">Learn more</a>
+          </article>
+
+          <article class="product-teaser">
+            <span class="product-teaser-tag">Product</span>
+            <h3 class="document-imaging-title document-imaging-title--sm">
+              <svg class="document-imaging-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M17.805 20.708a.684.684 0 0 0-.713.713c0 .332.322.583.794.603a.764.764 0 0 0 .753-.653a.774.774 0 0 0-.834-.663m-3.185 0a.674.674 0 0 0-.713.714c0 .331.321.582.783.602a.674.674 0 1 0-.07-1.316m-7.868-4.492a.32.32 0 0 0 .442-.08c.312-.311.694-.563 1.005-.894c.18-.181.352-.392.523-.583q.362-.478.773-.914a.36.36 0 0 0 .1-.493a.353.353 0 0 0-.492-.09q-.567.284-1.075.663a3.5 3.5 0 0 0-.402.372a2 2 0 0 0-.351.432q-.333.552-.563 1.155a.31.31 0 0 0 .04.432m2.382 2.03a.32.32 0 0 0 .432-.08q.474-.53 1.004-1.005c.272-.261.553-.492.834-.754c.282-.261.543-.502.794-.773c.814-.804 1.608-1.628 2.432-2.362a.35.35 0 0 0 .145-.38a.353.353 0 0 0-.453-.245a.4.4 0 0 0-.124.073c-.693.452-1.407.914-2.08 1.447a11 11 0 0 0-.824.713q-.408.376-.764.804a13 13 0 0 0-1.497 2.13a.31.31 0 0 0 .1.432m4.985-.814a.311.311 0 0 0 .502.362c.352-.342.744-.653 1.085-1.005c.181-.21.342-.442.513-.673q.344-.54.784-1.005a.36.36 0 0 0 .08-.492a.354.354 0 0 0-.492-.08a5.7 5.7 0 0 0-1.176.783q-.226.198-.412.432q-.18.224-.322.472c-.23.392-.371.834-.562 1.206"/>
+                  <path d="M21.835 19.693c-.08-.372-.724-3.065-.874-3.848a9 9 0 0 0-.272-1.005a13 13 0 0 0-.784-1.578c-.462-.723-1.004-1.386-1.507-2.08q.581-.966 1.005-2.01q.212-.568.362-1.155q.15-.552.24-1.115c.121-.674.172-1.347.232-2.01c.374-.617.63-1.299.754-2.01a1.47 1.47 0 0 0-.161-.814a1.87 1.87 0 0 0-.814-.723a8 8 0 0 0-2.01-.653a29 29 0 0 0-3.949-.623a29.5 29.5 0 0 0-4.02 0c-.451 0-.913.07-1.376.13S7.757.33 7.305.41c-.916.125-1.815.347-2.683.663A2.68 2.68 0 0 0 3.125 2.38a1.7 1.7 0 0 0-.121.613q0 .429.11.844q.066.263.171.512v.06a.4.4 0 0 0 0 .222c.242.884.443 1.768.694 2.652c.11.372.22.744.341 1.116s.272.743.422 1.095c.312.744.684 1.447 1.005 2.17c-.502.654-1.005 1.307-1.487 2.01a10 10 0 0 0-.573 1.005q-.267.49-.482 1.005a14.4 14.4 0 0 0-.744 2.602a.35.35 0 0 0 .06.282a.31.31 0 0 0 .121.271c0 .13-.11.261-.16.402a5 5 0 0 0-.242.794a2.6 2.6 0 0 0-.07.492q-.03.256 0 .513a2.59 2.59 0 0 0 1.728 2.01c1.158.434 2.374.695 3.608.773c1.703.154 3.415.207 5.124.16a31 31 0 0 0 5.105-.642c.543-.11 1.085-.211 1.628-.342a10 10 0 0 0 1.095-.321a.343.343 0 0 0 .221-.443s-.06-.07-.09-.1a.37.37 0 0 0 .22-.1c.401-.305.708-.716.885-1.186c.071-.204.112-.418.12-.633q.05-.26.02-.523M3.808 2.691a1.94 1.94 0 0 1 1.206-.834a12 12 0 0 1 2.522-.442l2.653-.221a32 32 0 0 1 3.828 0c1.283.064 2.562.205 3.828.422a9.7 9.7 0 0 1 1.608.382c.286.075.542.237.734.462c.08.162.105.345.07.523q-.09.47-.271.914h-.07a15 15 0 0 0-1.005-.633q-.408-.164-.834-.271a15 15 0 0 0-3.708-.744a24 24 0 0 0-2.804 0c-.944 0-1.879.13-2.773.211c-1.121.08-2.223.334-3.266.754A3.17 3.17 0 0 0 4.02 4.62a2 2 0 0 1-.17-.402a2 2 0 0 1-.111-.422a2.6 2.6 0 0 1-.06-.573c0-.186.044-.368.13-.533m-.06 14.49c.22-.432.462-.854.693-1.286s.462-.864.683-1.296c.402-.804.764-1.618 1.146-2.412h.08a.3.3 0 0 0 .171-.402c-.251-.884-.452-1.758-.703-2.633c-.11-.371-.232-.743-.362-1.105s-.271-.734-.442-1.095a65 65 0 0 0-.734-1.749a.28.28 0 0 0 .181-.2a2.33 2.33 0 0 1 1.407-1.166a9.7 9.7 0 0 1 3.014-.412l2.744-.1c.894 0 1.788-.051 2.693 0c1.182.015 2.359.167 3.506.451q.339.095.654.252c.341.16.663.351 1.004.532c-.24 1.005-.542 2.01-.834 3.015c-.11.372-.21.743-.311 1.115c-.1.372-.17.754-.271 1.126c-.1.371-.282.914-.453 1.366a.31.31 0 0 0-.24-.15a31 31 0 0 0-4.201-.212c-.824 0-1.658.06-2.492.121c-1.236.1-2.462.271-3.698.301a.313.313 0 0 0-.321.302a.3.3 0 0 0 .301.321q2.089.227 4.19.211c.824 0 1.648-.08 2.482-.14c1.236-.09 2.462-.211 3.698-.201a.35.35 0 0 0 .322-.221q.04.083.12.13a.28.28 0 0 0 .181 0l1.638 3.567q.252.592.442 1.206c.191.613.352 1.236.553 1.86a41 41 0 0 1-5.868.683c-.905 0-1.81.05-2.724.05s-1.808 0-2.713-.06a52 52 0 0 1-6.029-.553c.14-.412.302-.814.493-1.216m16.941 3.236q.015.195 0 .392a1.94 1.94 0 0 1-.291.834a.35.35 0 0 0 0 .472h-.07a9 9 0 0 1-1.005.251l-1.628.241q-2 .285-4.02.342a50 50 0 0 1-6.029-.181a11.7 11.7 0 0 1-3.346-.492a1.8 1.8 0 0 1-1.296-1.287a2.4 2.4 0 0 1 0-.371a3 3 0 0 1 0-.402c0-.242.1-.473.16-.704c.061-.23.101-.291.152-.432a43 43 0 0 0 5.908 1.005c.925.08 1.859.12 2.783.11c.925-.01 1.87 0 2.794-.12A36 36 0 0 0 20.74 19v.794c0 .27-.03.422-.05.623"/>
+                  <path d="M7.697 10.61a.29.29 0 0 0 .392.17a.31.31 0 0 0 .18-.402c-.18-.683-.311-1.366-.522-2.01c-.12-.391-.281-.773-.432-1.155s-.362-.924-.523-1.397a8 8 0 0 1 1.005-.15h2.2l3.568-.211q.685-.015 1.367.06c.572.06 1.135.16 1.698.251c-.161.432-.332.844-.483 1.276c-.08.231-.15.462-.21.704c-.061.24-.111.482-.161.723c-.1.583-.161 1.166-.221 1.749a.353.353 0 0 0 .258.453a.35.35 0 0 0 .425-.303c.2-.562.442-1.095.633-1.658a9 9 0 0 0 .321-1.145q.154-.923.171-1.86a.34.34 0 0 0 .09-.14a.35.35 0 0 0-.26-.412a38 38 0 0 0-2.11-.553q-.732-.161-1.478-.23a11 11 0 0 0-1.507 0c-.734 0-1.467.15-2.18.21s-1.488.181-2.221.332c-1.678.241-1.779.352-1.678.643a12 12 0 0 0 .26 1.9c.071.26.131.522.222.783l.301.744c.221.562.583 1.045.895 1.627"/>
+                </g>
+              </svg>
+              Document Imaging
+            </h3>
+            <p>High-volume scanning, OCR, and digitisation — migrating paper records into searchable digital archives across industries.</p>
+            <a href="document-imaging.html" class="btn btn-secondary">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about about--snippet">
+      <div class="container about-grid">
+        <div class="about-content">
+          <span class="section-tag">About Us</span>
+          <h2>Migrating Paper-Based Processes to Digital</h2>
+          <p class="about-slogan">
+            We enable capture, management and analysis of information for better business performance through digital processes automation.
+          </p>
+          <p>
+            DPA SA is a South African company specialising in the migration of paper-based business processes to digital business processes — with flexibility, innovation, and improvement at the heart of how we work.
+          </p>
+          <a href="about.html" class="btn btn-secondary">Read more about DPA-SA</a>
+        </div>
+        <div class="about-visual">
+          <div class="process-flow process-flow--timeline">
+            <article class="flow-step">
+              <div class="flow-step__marker">
+                <div class="flow-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+                </div>
+              </div>
+              <div class="flow-step__body">
+                <span class="flow-step__label">Step 1</span>
+                <strong>Paper-Based</strong>
+                <p>Manual forms, filing cabinets, and slow handoffs between teams.</p>
+              </div>
+            </article>
+
+            <article class="flow-step flow-step--active">
+              <div class="flow-step__marker">
+                <div class="flow-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01M9 6h6M9 10h6"/></svg>
+                </div>
+              </div>
+              <div class="flow-step__body">
+                <span class="flow-step__label">Step 2</span>
+                <strong>Digital Process</strong>
+                <p>Mobile capture, automated workflows, and data synced to one hub.</p>
+              </div>
+            </article>
+
+            <article class="flow-step">
+              <div class="flow-step__marker">
+                <div class="flow-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+                </div>
+              </div>
+              <div class="flow-step__body">
+                <span class="flow-step__label">Step 3</span>
+                <strong>Better Performance</strong>
+                <p>Real-time insight, stronger compliance, and measurable business results.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-content">
+        <h2>Ready to modernise how your organisation works?</h2>
+        <p>Enable capture, management and analysis of your information — for better business performance.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg">Request a Consultation</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Contact Us</span>
+          <h2>Let's Start Your Digital Journey</h2>
+          <p>
+            Get in touch to learn how DPA-SA can help your organisation digitise field work, monitor critical systems, and automate business processes.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+27615206017">+27 (0) 61 520 6017</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:info@dpa-sa.co.za">info@dpa-sa.co.za</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Address</strong>
+                <span>Dublin Street, Krugersdorp<br>Gauteng, South Africa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@company.co.za">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Your organisation">
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="bridge-digital-forms">Bridge Digital Forms</option>
+              <option value="impendulo">Impendulo Monitor</option>
+              <option value="document-imaging">Document Imaging</option>
+              <option value="other">Other / General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>Products &amp; Services</h4>
+        <ul>
+          <li><a href="bridge-digital-forms.html">Bridge Digital Forms</a></li>
+          <li><a href="impendulo.html">Impendulo Monitor</a></li>
+          <li><a href="document-imaging.html">Document Imaging</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul>
+          <li>
+            <a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+              Privacy Statement
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+              Website Usage Terms
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">
+              PAIA Manual
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 DPA-SA. All rights reserved. &nbsp;|&nbsp;
+        <a href="documentation/DPA-Privacy-Statement.pdf" target="_blank" rel="noopener noreferrer">Privacy</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-Website-Usage-Terms.pdf" target="_blank" rel="noopener noreferrer">Terms</a> &nbsp;|&nbsp;
+        <a href="documentation/DPA-PAIA-manual.pdf" target="_blank" rel="noopener noreferrer">PAIA</a>
+      </p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

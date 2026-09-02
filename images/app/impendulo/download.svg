@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" width="480" height="110">
+  <polygon points="54,4 96,28 96,76 54,100 12,76 12,28" fill="#ffffff" stroke="#E24B4A" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="22,52 34,52 40,32 48,72 56,42 64,62 70,52 86,52"
+    fill="none" stroke="#E24B4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="118" y="58" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff" textLength="345" lengthAdjust="spacing">Impendulo Monitor</text>
+  <text x="118" y="82" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#ffffff" fill-opacity="0.85" textLength="345" lengthAdjust="spacing">MONITOR &#183; DETECT &#183; RESPOND</text>
+</svg>
